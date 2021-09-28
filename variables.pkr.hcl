@@ -6,6 +6,7 @@ variables {
   iso_checksum_x86_64   = "file:https://repo.almalinux.org/almalinux/8.4/isos/x86_64/CHECKSUM"
   iso_url_aarch64       = "https://repo.almalinux.org/almalinux/8.4/isos/aarch64/AlmaLinux-8.4-aarch64-boot.iso"
   iso_checksum_aarch64  = "file:https://repo.almalinux.org/almalinux/8.4/isos/aarch64/CHECKSUM"
+  firmware              = "/usr/share/edk2/ovmf/OVMF_CODE.fd"
   headless              = true
   boot_wait             = "10s"
   cpus                  = 2
