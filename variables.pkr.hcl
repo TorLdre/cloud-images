@@ -49,7 +49,7 @@ variables {
   // Generic Cloud (OpenStack) variables
   //
   gencloud_boot_command_x86_64 = [
-    "<tab> inst.text net.ifnames=0 inst.gpt inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/almalinux-8.gencloud-x86_64.ks<enter><wait>"
+    "e<down><down><end><bs><bs><bs><bs><bs>inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/almalinux-8.gencloud-x86_64.ks<leftCtrlOn>x<leftCtrlOff>"
   ]
   gencloud_boot_command_aarch64 = [
     "c<wait>",

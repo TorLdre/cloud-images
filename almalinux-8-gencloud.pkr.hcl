@@ -12,6 +12,7 @@ source "qemu" "almalinux-8-gencloud-x86_64" {
   ssh_password       = var.gencloud_ssh_password
   ssh_timeout        = var.ssh_timeout
   cpus               = var.cpus
+  firmware           = "/usr/share/edk2/ovmf/OVMF_CODE.fd"
   disk_interface     = "virtio-scsi"
   disk_size          = var.gencloud_disk_size
   disk_cache         = "unsafe"
@@ -57,7 +58,7 @@ source "qemu" "almalinux-8-gencloud-aarch64" {
   boot_command       = var.gencloud_boot_command_aarch64
   qemuargs = [
     ["-cpu", "max"],
-    ["-boot", "strict=on"],
+    ["-boot var.firmware", "strict=on"],
     ["-monitor", "none"]
   ]
 }

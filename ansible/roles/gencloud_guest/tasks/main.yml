@@ -11,7 +11,6 @@
       - python3-slip
       - libnftnl
       - libnfnetlink
-      - linux-firmware
     state: absent
 
 - name: Install additional software
