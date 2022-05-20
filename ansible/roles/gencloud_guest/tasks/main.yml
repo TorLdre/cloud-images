@@ -70,7 +70,7 @@
     replace: 'NAutoVTs=0'
 
 - name: Configure NetworkManager default DHCP timeout
-  community.general.ini_file:
+  ini_file:
     path: /etc/NetworkManager/conf.d/dhcp.conf
     section: connection
     option: ipv4.dhcp-timeout
